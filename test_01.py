@@ -1,9 +1,23 @@
-def add(a, b):
+# -*- coding: utf-8 -*-
+from test_01 import *
+import pytest
+import os
 
-    z = a + b
-    print(z)
-    return z
+@pytest.fixture()
+def login():
+    print('输入账号和密码')
 
 
-add(1, 2)
+def test_01(login):
+    print('test1----')
+
+
+def test_02():
+    print('test2----不登录')
+
+
+def test_03(login):
+    print('test3----')
+
+
 
